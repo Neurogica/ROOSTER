@@ -1,0 +1,32 @@
+[project]
+name = "rooster"
+version = "0.1.0"
+description = "ROOSTER: relative aligned conditioning for time-series forecasting and PPG-to-vital-sign reconstruction"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.11"
+authors = [{ name = "Ragamayi Puli" }, { name = "Shunya Nagashima" }]
+dependencies = [
+    "torch>=2.8.0",
+    "numpy>=2.0.0",
+    "s5-pytorch>=0.2.1",
+    "pandas>=2.2",
+    "scipy>=1.14",
+    "h5py>=3.11",
+    "wfdb>=4.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0", "ruff>=0.6"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["rooster*"]
+
+[tool.ruff]
+exclude = ["rooster/models/vendor"]
+line-length = 150
+target-version = "py311"

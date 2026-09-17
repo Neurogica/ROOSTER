@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.venv/
+*.egg-info/
+build/
+dist/
+
+# datasets are downloaded locally (see data/README.md); only the notes are tracked
+/data/*
+!/data/README.md
+
+# run outputs
+/checkpoints/
+/results/
+LEADERBOARD.md
